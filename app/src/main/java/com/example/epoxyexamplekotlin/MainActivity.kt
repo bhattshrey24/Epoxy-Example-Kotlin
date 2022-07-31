@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.myEpoxyRecyclerView.setController(newsEpoxyController) // Its like setting adapter to the EpoxyRecyclerView
         newsEpoxyController.isLoading = true
         GlobalScope.launch {
-            delay(3000)
+            delay(3000)// just mimicking a real api response therefore added a delay
             newsEpoxyController.listOfNews = DummyData.listOfNews as ArrayList<News>
         }
     }
